@@ -53,15 +53,15 @@ def gradient_descent(x,y,iterations = 1000, learning_rate=0.0001, stopping_thres
               {current_weight}, Bias {current_bias}")
         
 
-        plt.figure(figsize=(8,6))
-        plt.plot(weights, costs)
-        plt.scatter(weights, costs, marker='o', color='red')
-        plt.title("Costs vs Weights")
-        plt.ylabel("Cost")
-        plt.xlabel("Weight")
-        plt.show()
+    plt.figure(figsize=(8,6))
+    plt.plot(weights, costs)
+    plt.scatter(weights, costs, marker='o', color='red')
+    plt.title("Costs vs Weights")
+    plt.ylabel("Cost")
+    plt.xlabel("Weight")
+    plt.show()
 
-        return current_weight,current_bias
+    return current_weight,current_bias
     
 
 
@@ -81,6 +81,21 @@ def main():
     #estimating weight and bias using gradient descent:
     estimated_weight, estimated_bias = gradient_descent(X,Y,iterations=2000)
     print(f"Estimated Weight: {estimated_weight}\nEstimated Bias: {estimated_bias}")
+
+    #making predictions using estimated parameters:
+    Y_pred = estimated_weight*X + estimated_bias
+
+    #plotting the regression line:
+
+    plt.figure(figsize=(8,6))
+    plt.scatter(X,Y,marker='o',color='red')
+    plt.plot([min(X),max(X)], [min(Y_pred), max(Y_pred)],
+             color = 'blue', markerfacecolor='red',
+             markersize=10,linestyle='dashed')
+    plt.xlabel("X")
+    plt.ylabel("Y")
+    plt.show()
+
 
 
 if __name__ == "__main__":
