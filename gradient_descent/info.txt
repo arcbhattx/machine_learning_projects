@@ -1,0 +1,24 @@
+repeat until convergence{
+    w = w - (learning_rate * (dJ/dw))
+    b = b - (learning_rate * (dJ/db))
+}
+
+example:
+
+Iteration 1:
+    x1 = x0 - (learning_rate * gradient)
+    x1 = 3 - (0.01 * (8 * 3))
+    x1 = 3 - 0.24
+    x1 = 2.76
+
+Iteration 2:
+    x2 = x1 - (learning_rate * gradient)
+    x2 = 2.76 - (0.01 * (8 * 2.76))
+    x2 = 2.76 - 0.2208
+    x2 = 2.5392
+
+Iteration 3:
+    x3 = x2 - (learning_rate * gradient)
+    x3 = 2.5392 - (0.01 * (8 * 2.5392))
+    x3 = 2.5392 - 0.203136
+    x3 = 2.3360
