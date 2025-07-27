@@ -1,0 +1,10 @@
+Logistic regression (Classification Algo)
+
+    A statistical model for binary Classification
+    garuntees results between 0 and 1
+
+
+functions:
+
+    sigmoid function 
+    
