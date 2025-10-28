@@ -1,1 +1,11 @@
 **/archive/
+
+# Ignore all .env files
+*.env
+
+# Ignore all .csv files
+*.csv
+
+#Ignore venv folders
+.venv/
+venv/
